@@ -7,26 +7,35 @@ License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	bd3f051d5b6cc221d56d4aec67edf4c3
-BuildRequires:	gtk+2-devel >= 2.2.0
-BuildRequires:	glib2-devel >= 2.0.0
-BuildRequires:	pkgconfig
-BuildRequires:	smpeg-devel >= 0.4.4
 BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	SDL_mixer-devel >= 1.2.0
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	gettext-devel
+BuildRequires:	glib2-devel >= 2.0.0
+BuildRequires:	gtk+2-devel >= 2.2.0
+BuildRequires:	libtool
+BuildRequires:	pkgconfig
+BuildRequires:	smpeg-devel >= 0.4.4
 URL:		http://ammp.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Simple multimedia player which uses GTK+2
+Simple multimedia player which uses GTK+2.
+
+%description -l pl
+Prosty odtwarzacz plików multimedialnych u¿ywaj±cy GTK+2.
 
 %prep
 %setup -q
 
 %build
+%{__gettextize}
 %{__libtoolize}
 %{__aclocal}
-%{__automake}
 %{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure
 
 %{__make}
@@ -34,7 +43,8 @@ Simple multimedia player which uses GTK+2
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name}
 
@@ -45,4 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README AUTHORS
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/ammp/pixmaps/*
+%{_datadir}/ammp
