@@ -7,12 +7,12 @@ License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	bd3f051d5b6cc221d56d4aec67edf4c3
-BuildRequires:  gtk+2-devel >= 2.2.0
-BuildRequires:  glib2-devel >= 2.0.0
-BuildRequires:  pkgconfig
-BuildRequires:  smpeg-devel >= 0.4.4
-BuildRequires:  SDL-devel >= 1.2.0
-BuildRequires:  SDL_mixer-devel >= 1.2.0
+BuildRequires:	gtk+2-devel >= 2.2.0
+BuildRequires:	glib2-devel >= 2.0.0
+BuildRequires:	pkgconfig
+BuildRequires:	smpeg-devel >= 0.4.4
+BuildRequires:	SDL-devel >= 1.2.0
+BuildRequires:	SDL_mixer-devel >= 1.2.0
 URL:		http://ammp.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
