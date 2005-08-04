@@ -5,7 +5,7 @@ Version:	2.2
 Release:	1
 License:	GPL
 Group:		Applications
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/ammp/%{name}-%{version}.tar.gz
 # Source0-md5:	bd3f051d5b6cc221d56d4aec67edf4c3
 BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	SDL_mixer-devel >= 1.2.0
