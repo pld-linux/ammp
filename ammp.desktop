@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=ammp
+Comment=Simple multimedia player
+Comment[pl]=Prosty odtwarzacz multimedialny
+Exec=ammp
+Icon=ammp.png
+Terminal=false
+Type=Application
+Categories=GTK;Audio;Player;
+Encoding=UTF-8
+# vi:encoding=utf-8
