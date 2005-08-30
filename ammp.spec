@@ -7,6 +7,7 @@ License:	GPL v2
 Group:		X11/Applications/Multimedia
 Source0:	http://dl.sourceforge.net/ammp/%{name}-%{version}.tar.gz
 # Source0-md5:	bd3f051d5b6cc221d56d4aec67edf4c3
+Source1:	%{name}.desktop
 URL:		http://ammp.sourceforge.net/
 BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	SDL_mixer-devel >= 1.2.0
@@ -42,9 +43,13 @@ Prosty odtwarzacz plików multimedialnych u¿ywaj±cy GTK+2.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install pixmaps/logo.png $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
 
 %find_lang %{name}
 
@@ -56,3 +61,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/ammp
+%{_desktopdir}/%{name}.desktop
+%{_pixmapsdir}/%{name}.png
