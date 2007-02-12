@@ -1,5 +1,5 @@
 Summary:	Simple multimedia player which uses GTK+2
-Summary(pl.UTF-8):   Prosta odgrywarka plików multimedialnych
+Summary(pl.UTF-8):	Prosta odgrywarka plików multimedialnych
 Name:		ammp
 Version:	2.2
 Release:	1
