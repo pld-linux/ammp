@@ -1,5 +1,5 @@
 Summary:	Simple multimedia player which uses GTK+2
-Summary(pl):	Prosta odgrywarka plików multimedialnych
+Summary(pl.UTF-8):   Prosta odgrywarka plikÃ³w multimedialnych
 Name:		ammp
 Version:	2.2
 Release:	1
@@ -24,8 +24,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Simple multimedia player which uses GTK+2.
 
-%description -l pl
-Prosty odtwarzacz plików multimedialnych u¿ywaj±cy GTK+2.
+%description -l pl.UTF-8
+Prosty odtwarzacz plikÃ³w multimedialnych uÅ¼ywajÄ…cy GTK+2.
 
 %prep
 %setup -q
